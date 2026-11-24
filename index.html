@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RecifeHub</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <img src="imagens/Logo RecifeHub.png" alt="imagemlogo" class="logo">
+
+
+    <nav class="nav">
+      <a href="#">Início</a>
+      <a href="#">Projetos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Ajuda</a>
+    </nav>
+
+    <div class="barra">
+      <form class="pesquisa" role="search" action="projetos.html" method="get">
+        <span class="pesquisa-icone" aria-hidden="true">⌕</span>
+        <input type="search" class="pesquisa-barra" name="q" placeholder="Buscar projetos, áreas, instituições..."
+          aria-label="Pesquisar projeto" autocomplete="off">
+        <button type="button" class="pesquisa-limpar" aria-label="Limpar busca" hidden>×</button>
+        <button type="submit" class="pesquisa-btn">Buscar</button>
+      </form>
+
+      <button class="btn btn-login" onclick="window.location.href='login.html'">
+        Entrar
+      </button>
+
+      <button class="btn btn-register" onclick="window.location.href='cadastro.html'">
+        Cadastrar
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-conteudo">
+      <h1>Conectando ideias,<br>impulsionando <span>projetos.</span></h1>
+
+      <p class="hero-descricao">
+        O RecifeHub é um portal gratuito que reúne projetos em andamento
+        e novas propostas, aproximando pessoas, instituições e ideias para
+        transformar a nossa cidade.
+      </p>
+
+      <div class="caracters">
+        <div class="caracter">
+          <span class="caracter-icone cap"></span>
+          <span>Pesquisas<br>acadêmicas</span>
+        </div>
+
+        <div class="caracter">
+          <span class="caracter-icone bulb"></span>
+          <span>Projetos<br>pessoais</span>
+        </div>
+
+        <div class="caracter">
+          <span class="caracter-icone bank"></span>
+          <span>Demandas de<br>Instituições</span>
+        </div>
+
+        <div class="caracter">
+          <span class="caracter-icone network"></span>
+          <span>Tudo em um<br>só lugar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-photo"></div>
+
+
+  </section>
+  <!-- Conteudo-->
+  <main>
+    <!--filtros de pesquisa-->
+    <div class="filtros">
+      <label class="filtro">
+        <span class="filtro-icones">⌕</span>
+        <input type="text" placeholder="Buscar por nome do projeto, área de conhecimento, palavra-chave...">
+      </label>
+
+      <div>
+        <select class="filtro" id="subject" name="subject">
+          <option value=" Em Desenvolvimento"><span class="filtro-icones">▤ </span>Em Desenvolvimento</option>
+          <option value="Pronto">Pronto</option>
+          <option value="Fase Incial">Fase Incial</option>
+        </select>
+      </div>
+
+
+
+      <div>
+        <select class="filtro" id="subject" name="subject">
+          <option value=" Em Desenvolvimento"><span class="filtro-icones">⌂ </span>Área de Conhecimento</option>
+          <option value="Pronto">Pronto</option>
+          <option value="Fase Incial">Fase Incial</option>
+        </select>
+      </div>
+
+      <div>
+        <select class="filtro" id="subject" name="subject">
+          <option value=" Em Desenvolvimento"><span class="filtro-icones">◷ </span>Status</option>
+          <option value="Pronto">Pronto</option>
+          <option value="Fase Incial">Fase Incial</option>
+        </select>
+      </div>
+
+      <button type="button" class="filtro clear" onclick="limparFiltros()">Limpar filtros</button>
+    </div>
+
+    <div class="layout">
+      <section>
+        <div class="section-cabecalho">
+          <h2>Projetos em destaque</h2>
+          <a href="#" class="todos-projetos">Ver todos os projetos →</a>
+        </div>
+
+        <div class="projetos-grid">
+
+    <article class="projeto-card">
+        <div class="projeto-image">
+            <span class="tag">Pesquisa</span>
+        </div>
+
+        <div class="projeto-body">
+            <h3>Monitoramento da qualidade da água no Rio Capibaribe</h3>
+
+            <p>
+                Projeto de pesquisa que avalia os impactos
+                da poluição na qualidade da água e propõe
+                soluções sustentáveis para o rio.
+            </p>
+
+            <div class="projeto-info">
+                <div>◉ Universidade Federal de Pernambuco (UFPE)</div>
+                <div>⌖ Recife - PE</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Outros projetos seguem o mesmo padrão -->
+     <article class="projeto-card">
+        <div class="projeto-image">
+            <span class="tag">Pesquisa</span>
+        </div>
+
+        <div class="projeto-body">
+            <h3>Monitoramento da qualidade da água no Rio Capibaribe</h3>
+
+            <p>
+                Projeto de pesquisa que avalia os impactos
+                da poluição na qualidade da água e propõe
+                soluções sustentáveis para o rio.
+            </p>
+
+            <div class="projeto-info">
+                <div>◉ Universidade Federal de Pernambuco (UFPE)</div>
+                <div>⌖ Recife - PE</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Outros projetos seguem o mesmo padrão -->
+     <article class="projeto-card">
+        <div class="projeto-image">
+            <span class="tag">Pesquisa</span>
+        </div>
+
+        <div class="projeto-body">
+            <h3>Monitoramento da qualidade da água no Rio Capibaribe</h3>
+
+            <p>
+                Projeto de pesquisa que avalia os impactos
+                da poluição na qualidade da água e propõe
+                soluções sustentáveis para o rio.
+            </p>
+
+            <div class="projeto-info">
+                <div>◉ Universidade Federal de Pernambuco (UFPE)</div>
+                <div>⌖ Recife - PE</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Outros projetos seguem o mesmo padrão -->
+      <article class="projeto-card">
+        <div class="projeto-image">
+            <span class="tag">Pesquisa</span>
+        </div>
+
+        <div class="projeto-body">
+            <h3>Monitoramento da qualidade da água no Rio Capibaribe</h3>
+
+            <p>
+                Projeto de pesquisa que avalia os impactos
+                da poluição na qualidade da água e propõe
+                soluções sustentáveis para o rio.
+            </p>
+
+            <div class="projeto-info">
+                <div>◉ Universidade Federal de Pernambuco (UFPE)</div>
+                <div>⌖ Recife - PE</div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Outros projetos seguem o mesmo padrão -->
+
+</div>
+      </section>
+
+      <aside>
+        <div class="cartao-lado">
+          <div class="cartao-lado-topo">
+            <span class="cartao-lado-icone">♧</span>
+            <h3>Tem um projeto?</h3>
+          </div>
+
+          <p>
+            Envie sua proposta e conecte-se
+            com pessoas e instituições que podem
+            ajudar a torná-la realidade.
+          </p>
+
+          <a href="#" class="lado-btn">Cadastrar projeto →</a>
+        </div>
+
+        <h2 class="categories-title">Categorias de projetos</h2>
+
+        <div class="category">
+          <span class="cat-icon">⌂</span>
+          Pesquisa
+          <span class="count">245</span>
+        </div>
+
+        <div class="category">
+          <span class="cat-icon">▤</span>
+          Teses
+          <span class="count">118</span>
+        </div>
+
+        <div class="category">
+          <span class="cat-icon">▤</span>
+          Dissertações
+          <span class="count">67</span>
+        </div>
+
+        <div class="category">
+          <span class="cat-icon">⚙</span>
+          Protótipos
+          <span class="count">95</span>
+        </div>
+
+        <div class="category">
+          <span class="cat-icon">♧</span>
+          Projetos de Extensão
+          <span class="count">87</span>
+        </div>
+
+        <div class="category">
+          <span class="cat-icon">•••</span>
+          Outros
+          <span class="count">43</span>
+        </div>
+
+        <div class="side-card city-card">
+          <span class="city-icon">♙</span>
+          <p>
+            Juntos por uma cidade<br>
+            mais inovadora e sustentável.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <img src="imagens/Logo RecifeHub.png" alt="RecifeHub" class="footer-logo">
+    <div>Ideias que constroem o futuro do Recife</div>
+
+    <div class="footer-links">
+      <a href="#">Termos de Uso</a>
+      <a href="#">Contato</a>
+      <a href="#">Privacidade</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
